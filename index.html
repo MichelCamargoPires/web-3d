@@ -6,54 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <title>Document</title>
+    <title>Model Viewer</title>
 
     <style>
-        
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f0f0f0; /* Cinza claro para o fundo */
+            font-family: Arial, sans-serif;
+            color: #333; /* Cinza escuro para o texto */
+        }
 
-    width: 100vw;
-    height: 100vh;
-
-    background-color: #d6d6d6;
-
-    --main-color: #53e3ed;
-    --main-color-darker: #2c75ad;
-}
         .box {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff; /* Fundo branco para a área do modelo */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
         }
 
         model-viewer {
             width: 300px;
             height: 300px;
-            margin: 0, auto;
+            margin: 20px 0;
+            background-color: #e0e0e0; /* Cinza médio para o fundo do modelo */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #444; /* Cinza escuro para o título */
+        }
+
+        p {
+            font-size: 14px;
+            text-align: center;
+            max-width: 400px;
+            color: #666; /* Cinza médio para o texto */
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888; /* Cinza claro para o rodapé */
         }
     </style>
 </head>
 
 <body>
-
     <div class="box">
-<!--         <div>somente arquivos glb</div> -->
-        <div>
-            
-            
-            <model-viewer src="Glorious Bombul-Juttuli.glb" camera-controls auto-rotate></model-viewer>
-            <!-- <model-viewer src="Tentacle.glb" camera-controls auto-rotate></model-viewer> -->
-
-           <!-- <p>Um protótipo de duas pernas é um modelo inicial ou uma versão preliminar de um robô ou dispositivo que é projetado para se locomover utilizando duas pernas, semelhante à locomoção humana. Esse tipo de protótipo é geralmente desenvolvido como uma etapa inicial em um projeto de robótica ou engenharia mecânica para testar conceitos, validar teorias e explorar soluções de design antes de avançar para versões mais complexas ou funcionais do produto final.</p>  -->
-            <bt></bt><br>
-           <!-- <model-viewer src="prototipo.glb" camera-controls auto-rotate></model-viewer> -->
+        <h1>Visualizador de Modelo 3D</h1>
+        <model-viewer src="aranha.glb" alt="Modelo 3D de uma aranha" camera-controls auto-rotate></model-viewer>
+        <p>
+            Este é um exemplo de visualização de um modelo 3D usando a biblioteca `<model-viewer>`. 
+            O modelo é interativo e pode ser girado e ampliado.
+        </p>
+        <div class="footer">
+            Desenvolvido com ❤️ por você
         </div>
     </div>
 </body>
